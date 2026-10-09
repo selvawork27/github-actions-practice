@@ -1,0 +1,15 @@
+name: Test Self-Hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-runner:
+    runs-on: self-hosted
+    steps:
+      - name: Check Windows runner
+        shell: powershell
+        run: |
+          Write-Host "Self-hosted runner is working!"
+          whoami
+          docker --version
