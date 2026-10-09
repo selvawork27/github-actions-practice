@@ -1,0 +1,20 @@
+name: My First GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    runs-on: ubuntu- latest
+
+    steps:
+      - name: print a message
+        run: echo "Hello,world!"
+
+      - name: show current date
+        run: date
+
+      - name: show runner os
+        run: echo "Running on Githubs ubuntu"
